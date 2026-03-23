@@ -72,6 +72,7 @@ function formatMessage(events) {
 	return `🎂 Today's Reminders\n\n${lines.join("\n")}`;
 }
 
+
 async function sendTelegram(token, chatId, message, retries = 3) {
 	const url = `https://api.telegram.org/bot${token}/sendMessage`;
 	for (let i = 1; i <= retries; i++) {
